@@ -1,0 +1,2 @@
+# stremio-dailymotion-addon
+Seriale
