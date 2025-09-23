@@ -1,0 +1,13 @@
+{
+  "name": "stremio-dailymotion-addon",
+  "version": "1.0.0",
+  "description": "Unofficial Dailymotion addon for Stremio",
+  "main": "stremio-dailymotion-addon.js",
+  "scripts": {
+    "start": "node stremio-dailymotion-addon.js"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "^0.5.10",
+    "node-fetch": "^2.6.7"
+  }
+}
