@@ -1,0 +1,185 @@
+{
+  "tts_model_id": "eleven_multilingual_v2",
+  "voices": [
+    {
+      "voice_id": "9BWtsMINqrJLrRacOk9x",
+      "name": "Aria",
+      "gender": "female",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["expressive", "warm", "versatile"],
+      "best_for": ["lead_dramatic", "comedic", "narration"]
+    },
+    {
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "name": "Roger",
+      "gender": "male",
+      "age_band": "adult",
+      "accent": "american",
+      "qualities": ["confident", "deep", "authoritative"],
+      "best_for": ["lead_dramatic", "antagonist", "narration"]
+    },
+    {
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "gender": "female",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["soft", "professional", "calm"],
+      "best_for": ["supporting", "voice_of_reason"]
+    },
+    {
+      "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+      "name": "Laura",
+      "gender": "female",
+      "age_band": "adult",
+      "accent": "american",
+      "qualities": ["bright", "upbeat", "playful"],
+      "best_for": ["comedic", "supporting", "younger_lead"]
+    },
+    {
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "name": "Charlie",
+      "gender": "male",
+      "age_band": "adult",
+      "accent": "australian",
+      "qualities": ["natural", "casual", "friendly"],
+      "best_for": ["everyman_lead", "supporting", "comedic"]
+    },
+    {
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "name": "George",
+      "gender": "male",
+      "age_band": "older",
+      "accent": "british",
+      "qualities": ["mature", "warm", "weathered"],
+      "best_for": ["mentor", "narrator", "patriarch"]
+    },
+    {
+      "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+      "name": "Callum",
+      "gender": "male",
+      "age_band": "adult",
+      "accent": "british",
+      "qualities": ["intense", "gravelly", "menacing"],
+      "best_for": ["antagonist", "noir_lead", "anti_hero"]
+    },
+    {
+      "voice_id": "SAz9YHcvj6GT2YYXdXww",
+      "name": "River",
+      "gender": "non_binary",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["cool", "androgynous", "expressive"],
+      "best_for": ["supporting", "ensemble", "modern_drama"]
+    },
+    {
+      "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+      "name": "Liam",
+      "gender": "male",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["youthful", "articulate", "earnest"],
+      "best_for": ["young_lead", "supporting", "ingenue"]
+    },
+    {
+      "voice_id": "XB0fDUnXU5powFXDhCwa",
+      "name": "Charlotte",
+      "gender": "female",
+      "age_band": "adult",
+      "accent": "swedish",
+      "qualities": ["sensual", "smooth", "measured"],
+      "best_for": ["femme_fatale", "lead_dramatic", "supporting"]
+    },
+    {
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "name": "Alice",
+      "gender": "female",
+      "age_band": "adult",
+      "accent": "british",
+      "qualities": ["confident", "warm", "professional"],
+      "best_for": ["lead_dramatic", "supporting", "narrator"]
+    },
+    {
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "name": "Matilda",
+      "gender": "female",
+      "age_band": "adult",
+      "accent": "american",
+      "qualities": ["friendly", "natural", "warm"],
+      "best_for": ["supporting", "everyman_lead", "comedic"]
+    },
+    {
+      "voice_id": "bIHbv24MWmeRgasZH58o",
+      "name": "Will",
+      "gender": "male",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["mellow", "casual", "thoughtful"],
+      "best_for": ["young_lead", "supporting", "everyman"]
+    },
+    {
+      "voice_id": "cgSgspJ2msm6clMCkdW9",
+      "name": "Jessica",
+      "gender": "female",
+      "age_band": "young_adult",
+      "accent": "american",
+      "qualities": ["expressive", "energetic", "natural"],
+      "best_for": ["young_lead", "comedic", "ensemble"]
+    },
+    {
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "name": "Eric",
+      "gender": "male",
+      "age_band": "older",
+      "accent": "american",
+      "qualities": ["smooth", "classic", "authoritative"],
+      "best_for": ["mentor", "patriarch", "narrator"]
+    },
+    {
+      "voice_id": "iP95p4xoKVk53GoZ742B",
+      "name": "Chris",
+      "gender": "male",
+      "age_band": "adult",
+      "accent": "american",
+      "qualities": ["natural", "everyman", "approachable"],
+      "best_for": ["everyman_lead", "supporting", "comedic"]
+    },
+    {
+      "voice_id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "gender": "male",
+      "age_band": "older",
+      "accent": "american",
+      "qualities": ["resonant", "warm", "trustworthy"],
+      "best_for": ["narrator", "mentor", "patriarch"]
+    },
+    {
+      "voice_id": "onwK4e9ZLuTAKqWW03F9",
+      "name": "Daniel",
+      "gender": "male",
+      "age_band": "adult",
+      "accent": "british",
+      "qualities": ["authoritative", "newscaster", "polished"],
+      "best_for": ["antagonist", "lead_dramatic", "narrator"]
+    },
+    {
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "name": "Lily",
+      "gender": "female",
+      "age_band": "adult",
+      "accent": "british",
+      "qualities": ["warm", "natural", "approachable"],
+      "best_for": ["lead_dramatic", "supporting", "narrator"]
+    },
+    {
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "name": "Bill",
+      "gender": "male",
+      "age_band": "older",
+      "accent": "american",
+      "qualities": ["seasoned", "trustworthy", "mature"],
+      "best_for": ["narrator", "mentor", "patriarch"]
+    }
+  ]
+}
