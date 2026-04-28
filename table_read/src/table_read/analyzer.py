@@ -54,11 +54,45 @@ _CLAUDE_SEMAPHORE = asyncio.Semaphore(int(os.environ.get("TR_CLAUDE_CONCURRENCY"
 T = TypeVar("T", bound=BaseModel)
 
 
+def _add_additional_properties_false(schema: dict) -> dict:
+    """Recursively force ``additionalProperties: false`` on every object schema.
+
+    Anthropic's structured-output endpoint rejects an object schema that
+    doesn't pin this explicitly; pydantic's default ``model_json_schema()``
+    leaves it implicit.
+    """
+    if isinstance(schema, dict):
+        if schema.get("type") == "object" or "properties" in schema:
+            schema.setdefault("additionalProperties", False)
+        for key in ("properties", "$defs", "definitions"):
+            sub = schema.get(key)
+            if isinstance(sub, dict):
+                for v in sub.values():
+                    _add_additional_properties_false(v)
+        for key in ("items", "not"):
+            sub = schema.get(key)
+            if isinstance(sub, dict):
+                _add_additional_properties_false(sub)
+        # additionalProperties may itself be a schema (rare, but happens).
+        ap = schema.get("additionalProperties")
+        if isinstance(ap, dict):
+            _add_additional_properties_false(ap)
+        for key in ("anyOf", "oneOf", "allOf"):
+            sub = schema.get(key)
+            if isinstance(sub, list):
+                for s in sub:
+                    _add_additional_properties_false(s)
+    return schema
+
+
 def _schema_for(model: type[BaseModel], name: str) -> dict:
+    # Anthropic structured-output format object: {"type": "json_schema",
+    # "schema": ...}.  No "name" field — the API rejects it as an extra input.
+    schema = _add_additional_properties_false(model.model_json_schema())
+    schema.setdefault("title", name)
     return {
         "type": "json_schema",
-        "name": name,
-        "schema": model.model_json_schema(),
+        "schema": schema,
     }
 
 
