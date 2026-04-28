@@ -291,6 +291,29 @@ def _pcm_duration_ms(byte_len: int, *, sample_rate: int) -> int:
 # ---------------------------------------------------------------------------
 
 
+_HONORIFIC_PREFIXES = (
+    "DET. ", "DETECTIVE ", "DR. ", "DOCTOR ", "MR. ", "MRS. ", "MS. ",
+    "OFFICER ", "PROF. ", "PROFESSOR ", "CAPT. ", "CAPTAIN ",
+    "SGT. ", "SERGEANT ", "LT. ", "LIEUTENANT ", "FATHER ", "SISTER ",
+    "REV. ", "REVEREND ", "GEN. ", "GENERAL ",
+)
+
+
+def _normalize_character(name: str) -> str:
+    """Tolerate case + common honorifics when matching characters across stages.
+
+    The screenplay's character cues are ALL-CAPS (`KOWALSKI`); the casting LLM
+    sometimes returns proper-cased names with titles (`Det. Kowalski`).  Both
+    should resolve to the same casting entry.
+    """
+    s = name.upper().strip()
+    for prefix in _HONORIFIC_PREFIXES:
+        if s.startswith(prefix):
+            s = s[len(prefix):].strip()
+            break
+    return s
+
+
 def line_id_for(beat_id: str, character: str, text: str) -> str:
     return f"{beat_id}_{character.replace(' ', '_')}_{short_hash(text, length=6)}"
 
@@ -315,7 +338,7 @@ async def render_screenplay(
     cached_manifest: Manifest | None = None,
     run_uuid: str,
 ) -> Manifest:
-    cast_by_char = casting.by_character()
+    cast_by_char = {_normalize_character(e.character): e for e in casting.entries}
     directions = _flatten_directions(direction_tracks)
     cached_by_line: dict[str, RenderRecord] = (
         {r.line_id: r for r in cached_manifest.records}
@@ -325,11 +348,12 @@ async def render_screenplay(
 
     # First pass: build the full plan so previous_text / next_text are stable
     # before we kick off any HTTP work.
+    skipped: list[str] = []
     plan: list[dict] = []
     for i, d in enumerate(directions):
-        cast = cast_by_char.get(d.character)
+        cast = cast_by_char.get(_normalize_character(d.character))
         if cast is None:
-            # Casting missing for this character: skip the line.
+            skipped.append(d.character)
             continue
         prev_text = directions[i - 1].text if i > 0 else None
         next_text = directions[i + 1].text if i + 1 < len(directions) else None
@@ -350,6 +374,13 @@ async def render_screenplay(
         )
 
     out_dir.mkdir(parents=True, exist_ok=True)
+    if skipped:
+        import logging
+        logging.getLogger("table_read").warning(
+            "No casting found for %d direction(s) — skipping: %s",
+            len(skipped),
+            sorted(set(skipped)),
+        )
 
     async def _render(item: dict) -> RenderRecord:
         return await renderer.render_one(
