@@ -54,41 +54,58 @@ _CLAUDE_SEMAPHORE = asyncio.Semaphore(int(os.environ.get("TR_CLAUDE_CONCURRENCY"
 T = TypeVar("T", bound=BaseModel)
 
 
-def _add_additional_properties_false(schema: dict) -> dict:
-    """Recursively force ``additionalProperties: false`` on every object schema.
+_UNSUPPORTED_CONSTRAINTS = {
+    # Numerical
+    "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "multipleOf",
+    # String
+    "minLength", "maxLength", "pattern", "format",
+    # Array
+    "minItems", "maxItems", "uniqueItems",
+}
 
-    Anthropic's structured-output endpoint rejects an object schema that
-    doesn't pin this explicitly; pydantic's default ``model_json_schema()``
-    leaves it implicit.
+
+def _sanitize_schema(schema: dict) -> dict:
+    """Recursively prepare a pydantic JSON schema for Anthropic structured outputs.
+
+    1. Force ``additionalProperties: false`` on every object schema.
+    2. Strip numerical/string/array constraints that the API rejects
+       (``minimum``, ``maximum``, ``minLength`` etc.).  We re-validate
+       these ranges client-side via pydantic on the response.
     """
     if isinstance(schema, dict):
+        for key in list(schema.keys()):
+            if key in _UNSUPPORTED_CONSTRAINTS:
+                del schema[key]
         if schema.get("type") == "object" or "properties" in schema:
             schema.setdefault("additionalProperties", False)
         for key in ("properties", "$defs", "definitions"):
             sub = schema.get(key)
             if isinstance(sub, dict):
                 for v in sub.values():
-                    _add_additional_properties_false(v)
+                    _sanitize_schema(v)
         for key in ("items", "not"):
             sub = schema.get(key)
             if isinstance(sub, dict):
-                _add_additional_properties_false(sub)
-        # additionalProperties may itself be a schema (rare, but happens).
+                _sanitize_schema(sub)
         ap = schema.get("additionalProperties")
         if isinstance(ap, dict):
-            _add_additional_properties_false(ap)
+            _sanitize_schema(ap)
         for key in ("anyOf", "oneOf", "allOf"):
             sub = schema.get(key)
             if isinstance(sub, list):
                 for s in sub:
-                    _add_additional_properties_false(s)
+                    _sanitize_schema(s)
     return schema
+
+
+# Backwards-compatible alias for the previous name.
+_add_additional_properties_false = _sanitize_schema
 
 
 def _schema_for(model: type[BaseModel], name: str) -> dict:
     # Anthropic structured-output format object: {"type": "json_schema",
     # "schema": ...}.  No "name" field — the API rejects it as an extra input.
-    schema = _add_additional_properties_false(model.model_json_schema())
+    schema = _sanitize_schema(model.model_json_schema())
     schema.setdefault("title", name)
     return {
         "type": "json_schema",

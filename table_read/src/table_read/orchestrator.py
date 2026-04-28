@@ -147,6 +147,7 @@ async def run(
         screenplay = sp_module.parse_regex(raw_text, title=script_path.stem)
         _save_model(artifacts.beats, screenplay)
         inputs_lock.parse = beats_hash
+        _save_model(artifacts.inputs_lock, inputs_lock)
 
     client = AsyncAnthropic()
 
@@ -165,6 +166,7 @@ async def run(
             screenplay = await analyzer.repair_beats(client, raw_text, screenplay)
             _save_model(artifacts.beats, screenplay)
             inputs_lock.repair = repair_hash
+            _save_model(artifacts.inputs_lock, inputs_lock)
 
     # ---------- Stage 3: extract characters ----------
     extract_hash = sha256_hex(screenplay, "extract_v1")
@@ -179,6 +181,7 @@ async def run(
         characters = await analyzer.extract_characters(client, raw_text)
         _save_list(artifacts.characters, characters)
         inputs_lock.extract_characters = extract_hash
+        _save_model(artifacts.inputs_lock, inputs_lock)
 
     # ---------- Stage 4: voice profiles (parallel) ----------
     profile_hash = sha256_hex(extract_hash, characters, "voice_profile_v1")
@@ -193,6 +196,7 @@ async def run(
         voice_profiles = await analyzer.profile_voices(client, raw_text, characters)
         _save_list(artifacts.voice_profiles, voice_profiles)
         inputs_lock.profile_voice = profile_hash
+        _save_model(artifacts.inputs_lock, inputs_lock)
 
     # ---------- Stage 5: lexicon ----------
     lex_hash = sha256_hex(screenplay, "lexicon_v1")
@@ -207,6 +211,7 @@ async def run(
         lexicon = await analyzer.build_lexicon(client, raw_text)
         _save_model(artifacts.lexicon, lexicon)
         inputs_lock.build_lexicon = lex_hash
+        _save_model(artifacts.inputs_lock, inputs_lock)
 
     # ---------- Stage 6: casting ----------
     casting = await _resolve_casting(
@@ -234,6 +239,7 @@ async def run(
         )
         _save_list(artifacts.direction, direction_tracks)
         inputs_lock.direct_scenes = direct_hash
+        _save_model(artifacts.inputs_lock, inputs_lock)
 
     _save_model(artifacts.inputs_lock, inputs_lock)
 
@@ -306,6 +312,7 @@ async def _resolve_casting(
     )
     _save_model(artifacts.casting, casting)
     inputs_lock.cast = cast_hash
+    _save_model(artifacts.inputs_lock, inputs_lock)
     return apply_override_json(casting, artifacts.casting_override)
 
 
