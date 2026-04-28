@@ -1,0 +1,343 @@
+{
+  "title": "sample_scene",
+  "scenes": [
+    {
+      "scene_idx": 0,
+      "heading": "INT. DINER - NIGHT",
+      "beat_ids": [
+        "0-0",
+        "0-1",
+        "0-2",
+        "0-3",
+        "0-4",
+        "0-5",
+        "0-6",
+        "0-7",
+        "0-8",
+        "0-9",
+        "0-10",
+        "0-11",
+        "0-12",
+        "0-13",
+        "0-14",
+        "0-15",
+        "0-16",
+        "0-17",
+        "0-18",
+        "0-19",
+        "0-20",
+        "0-21",
+        "0-22",
+        "0-23",
+        "0-24",
+        "0-25",
+        "0-26",
+        "0-27",
+        "0-28",
+        "0-29",
+        "0-30",
+        "0-31",
+        "0-32"
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "beat_id": "0-0",
+      "scene_idx": 0,
+      "beat_idx": 0,
+      "kind": "scene_heading",
+      "text": "INT. DINER - NIGHT",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-1",
+      "scene_idx": 0,
+      "beat_idx": 1,
+      "kind": "action",
+      "text": "Rain hammers the windows. A near-empty room. NEON light bleeds across cracked vinyl booths.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-2",
+      "scene_idx": 0,
+      "beat_idx": 2,
+      "kind": "action",
+      "text": "MAYA (28), eyes red-rimmed, nurses a coffee. Across from her, DET. KOWALSKI (50s), trench coat dripping, slides into the booth.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-3",
+      "scene_idx": 0,
+      "beat_idx": 3,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-4",
+      "scene_idx": 0,
+      "beat_idx": 4,
+      "kind": "dialogue",
+      "text": "You shouldn't have come.",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-5",
+      "scene_idx": 0,
+      "beat_idx": 5,
+      "kind": "character_cue",
+      "text": "MAYA",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-6",
+      "scene_idx": 0,
+      "beat_idx": 6,
+      "kind": "dialogue",
+      "text": "You said you had answers.",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-7",
+      "scene_idx": 0,
+      "beat_idx": 7,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-8",
+      "scene_idx": 0,
+      "beat_idx": 8,
+      "kind": "parenthetical",
+      "text": "(quiet)",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-9",
+      "scene_idx": 0,
+      "beat_idx": 9,
+      "kind": "dialogue",
+      "text": "I said I had questions.",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-10",
+      "scene_idx": 0,
+      "beat_idx": 10,
+      "kind": "action",
+      "text": "Maya looks away. Outside, a car passes too slowly.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-11",
+      "scene_idx": 0,
+      "beat_idx": 11,
+      "kind": "character_cue",
+      "text": "MAYA",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-12",
+      "scene_idx": 0,
+      "beat_idx": 12,
+      "kind": "dialogue",
+      "text": "Then ask them.",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-13",
+      "scene_idx": 0,
+      "beat_idx": 13,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-14",
+      "scene_idx": 0,
+      "beat_idx": 14,
+      "kind": "dialogue",
+      "text": "Where were you the night your sister disappeared?",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-15",
+      "scene_idx": 0,
+      "beat_idx": 15,
+      "kind": "action",
+      "text": "A long beat. The waitress, ROSIE (60s), refills Kowalski's mug without being asked.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-16",
+      "scene_idx": 0,
+      "beat_idx": 16,
+      "kind": "character_cue",
+      "text": "ROSIE",
+      "character": "ROSIE",
+      "extension": null
+    },
+    {
+      "beat_id": "0-17",
+      "scene_idx": 0,
+      "beat_idx": 17,
+      "kind": "dialogue",
+      "text": "Pie's fresh, hon.",
+      "character": "ROSIE",
+      "extension": null
+    },
+    {
+      "beat_id": "0-18",
+      "scene_idx": 0,
+      "beat_idx": 18,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-19",
+      "scene_idx": 0,
+      "beat_idx": 19,
+      "kind": "parenthetical",
+      "text": "(without looking up)",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-20",
+      "scene_idx": 0,
+      "beat_idx": 20,
+      "kind": "dialogue",
+      "text": "Not tonight, Rosie.",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-21",
+      "scene_idx": 0,
+      "beat_idx": 21,
+      "kind": "action",
+      "text": "Rosie shuffles off. Maya's hands tremble around her cup.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-22",
+      "scene_idx": 0,
+      "beat_idx": 22,
+      "kind": "character_cue",
+      "text": "MAYA",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-23",
+      "scene_idx": 0,
+      "beat_idx": 23,
+      "kind": "dialogue",
+      "text": "I was at the lake.",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-24",
+      "scene_idx": 0,
+      "beat_idx": 24,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-25",
+      "scene_idx": 0,
+      "beat_idx": 25,
+      "kind": "dialogue",
+      "text": "Alone?",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-26",
+      "scene_idx": 0,
+      "beat_idx": 26,
+      "kind": "character_cue",
+      "text": "MAYA",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-27",
+      "scene_idx": 0,
+      "beat_idx": 27,
+      "kind": "parenthetical",
+      "text": "(barely audible)",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-28",
+      "scene_idx": 0,
+      "beat_idx": 28,
+      "kind": "dialogue",
+      "text": "She was already gone when I got there.",
+      "character": "MAYA",
+      "extension": null
+    },
+    {
+      "beat_id": "0-29",
+      "scene_idx": 0,
+      "beat_idx": 29,
+      "kind": "action",
+      "text": "Kowalski leans back. Studies her. The rain gets louder.",
+      "character": null,
+      "extension": null
+    },
+    {
+      "beat_id": "0-30",
+      "scene_idx": 0,
+      "beat_idx": 30,
+      "kind": "character_cue",
+      "text": "KOWALSKI",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-31",
+      "scene_idx": 0,
+      "beat_idx": 31,
+      "kind": "dialogue",
+      "text": "Then why'd you wait six years to say so?",
+      "character": "KOWALSKI",
+      "extension": null
+    },
+    {
+      "beat_id": "0-32",
+      "scene_idx": 0,
+      "beat_idx": 32,
+      "kind": "transition",
+      "text": "FADE OUT.",
+      "character": null,
+      "extension": null
+    }
+  ]
+}

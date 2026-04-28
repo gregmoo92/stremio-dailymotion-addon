@@ -1,0 +1,44 @@
+{
+  "tts_model_id": "eleven_multilingual_v2",
+  "entries": [
+    {
+      "character": "Det. Kowalski",
+      "voice_id": "nPczCjzI2devNBz1zQrb",
+      "voice_name": "Brian",
+      "base_voice_settings": {
+        "stability": 0.73,
+        "similarity_boost": 0.75,
+        "style": 0.33,
+        "use_speaker_boost": true,
+        "speed": 0.94
+      },
+      "rationale": "Brian's resonant, warm, trustworthy baritone with an older American voice sits back in the chest and carries the weighted, unhurried cadence Kowalski demands — resonant enough to fill silence without projecting, and seasoned enough to feel like a man who has waited six years for this conversation. Stability is pushed high to reflect his iron control; style is kept low to preserve the flat investigative affect, and speed is slowed to honor the deliberate, pause-heavy delivery."
+    },
+    {
+      "character": "Maya",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "base_voice_settings": {
+        "stability": 0.49,
+        "similarity_boost": 0.75,
+        "style": 0.41,
+        "use_speaker_boost": true,
+        "speed": 0.96
+      },
+      "rationale": "Sarah's soft, calm, professional young-adult American voice provides the intimate close-mic quality Maya requires — a quiet dynamic baseline that can carry suppressed grief and micro-tremors without tipping into theatrical crying or confident narrator brightness. Stability is kept moderate to allow the fragile composure to crack at edges; style is nudged up slightly to carry the emotional undercurrent of grief actively held in check."
+    },
+    {
+      "character": "Rosie",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "voice_name": "Matilda",
+      "base_voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.75,
+        "style": 0.33,
+        "use_speaker_boost": true,
+        "speed": 0.97
+      },
+      "rationale": "Matilda's friendly, natural, warm American adult voice approximates the lived-in diner-familiar ease Rosie needs — unhurried, approachable, with enough natural texture to suggest a woman who has poured a million cups without competing with the scene's tension. Stability is kept high for composure and low arousal; style is moderate to allow the gentle melodic lilt at line endings without theatricality."
+    }
+  ]
+}

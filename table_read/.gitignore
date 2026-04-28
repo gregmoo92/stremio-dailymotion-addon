@@ -2,9 +2,17 @@ __pycache__/
 *.pyc
 .env
 .venv/
-output/
 output.*.log
 *.egg-info/
 build/
 dist/
 .pytest_cache/
+
+# Binary render artifacts and sandbox-specific intermediate files.
+output/lines/
+output/_silences/
+output/_concat.txt
+output/runs/
+# manifest.json contains absolute paths from the run host; it is regenerated
+# every render, so committing it would just create churn.
+output/manifest.json

@@ -1,0 +1,64 @@
+[
+  {
+    "accent_or_origin": null,
+    "age_range": "50s",
+    "arc_summary": "A worn detective steers a quiet diner meeting into the question he's waited six years to ask.",
+    "emotional_baseline": "Weary, patient, watchful; emotion compressed beneath a flat investigative calm.",
+    "gender": "male",
+    "motivations": [
+      "Extract a confession or contradiction from Maya",
+      "Close a six-year-old case that has clearly haunted him",
+      "Control the tempo of the conversation"
+    ],
+    "name": "Det. Kowalski",
+    "role_size": "lead",
+    "vocal_qualities": [
+      "gravelly",
+      "measured",
+      "low-register",
+      "unhurried",
+      "quietly probing"
+    ]
+  },
+  {
+    "accent_or_origin": null,
+    "age_range": "28",
+    "arc_summary": "A woman summoned for answers is cornered into admitting she was at the lake the night her sister vanished.",
+    "emotional_baseline": "Exhausted grief held just under the surface; braced for accusation.",
+    "gender": "female",
+    "motivations": [
+      "Learn what Kowalski actually knows",
+      "Unburden a six-year-old secret without fully incriminating herself",
+      "Protect the memory of her sister"
+    ],
+    "name": "Maya",
+    "role_size": "lead",
+    "vocal_qualities": [
+      "fragile",
+      "hushed",
+      "tear-worn",
+      "tremulous on consonants",
+      "guarded"
+    ]
+  },
+  {
+    "accent_or_origin": null,
+    "age_range": "60s",
+    "arc_summary": "A lifer waitress drifts through a tense interrogation offering coffee and pie, a brief note of normalcy.",
+    "emotional_baseline": "Easy, maternal warmth; oblivious or politely indifferent to the tension at the booth.",
+    "gender": "female",
+    "motivations": [
+      "Tend to her regulars",
+      "Offer a small kindness (pie, coffee) in a bleak room"
+    ],
+    "name": "Rosie",
+    "role_size": "minor",
+    "vocal_qualities": [
+      "warm",
+      "raspy from years of use",
+      "casual",
+      "unhurried",
+      "diner-familiar"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "base_dsl": {
+      "arousal": 0.25,
+      "control": 0.85,
+      "effort": 0.3,
+      "pace": 0.3,
+      "pause_before_ms": 450,
+      "valence": -0.15
+    },
+    "casting_notes": "Cast a 50\u201365-year-old male voice with a genuinely low, slightly gravelly baritone \u2014 think a man who has spoken at this volume for thirty years because he's never needed to speak louder. Avoid polished announcer voices, avoid noir-pastiche growl, and avoid anything bright or forward-placed. The ideal voice sits back in the chest, lands consonants softly, and can hold a four-second pause without losing presence. He should sound tired but not defeated, patient but not kind; the menace is in the restraint, not the volume. A faint working-class American coloration is welcome but no specific regional accent should dominate. If the catalog offers samples, prefer the one that sounds like he's already heard the answer and is waiting to see if you'll lie.",
+    "character": "Det. Kowalski",
+    "recommended_voice_traits": [
+      "Low register baritone with a dry gravel on sustained vowels",
+      "Weathered timbre \u2014 smoke-and-coffee texture, slight glottal fry at phrase ends",
+      "Deliberate, unhurried cadence with weighted pauses before key questions",
+      "Flat investigative affect; minimal pitch variation, statements landing as soft declaratives even when interrogative",
+      "Late-vowel emphasis and clipped consonants on operative words ('alone', 'six years')",
+      "Quiet default volume \u2014 speaks under the room rather than over it, forcing the listener to lean in",
+      "Neutral urban American, faint Rust Belt or outer-borough residue (non-specific, working-class)",
+      "Breath audible between sentences; sighs compressed, never theatrical"
+    ]
+  },
+  {
+    "base_dsl": {
+      "arousal": 0.42,
+      "control": 0.38,
+      "effort": 0.28,
+      "pace": 0.35,
+      "pause_before_ms": 420,
+      "valence": -0.55
+    },
+    "casting_notes": "Cast a young-adult female voice that can sustain quiet, intimate close-mic delivery without losing intelligibility \u2014 think a tear-thinned, slightly hoarse mid-range with breath built into every phrase. The actor must convey grief that is being actively suppressed: composure on the surface, micro-tremors underneath, and the constant sense that the next sentence might fracture. Avoid bright, confident, or 'narrator-pretty' voices; avoid heavy vocal fry as a stylistic tic. Prioritize voices that can drop to a near-whisper ('She was already gone when I got there.') and still carry weight, and that handle silence and hesitation as performance rather than dead air. Neutral American placement, no strong regional color. The role is lead and dialogue-heavy in confined two-handers, so stamina at low volume and consistency across long takes matter more than range.",
+    "character": "Maya",
+    "recommended_voice_traits": [
+      "mid-to-light register with a breathy, slightly nasal head tone",
+      "fine sandpaper rasp at the edges of voiced consonants from recent crying",
+      "quiet dynamic baseline \u2014 speaks just above a whisper, rarely projects",
+      "tremor that surfaces on plosives and sibilants ('p', 't', 's') rather than vowels",
+      "late, hesitant onsets \u2014 words begin a half-beat after the breath",
+      "unaccented contemporary North American English, faint regional neutrality",
+      "narrow pitch range; falling, deflated cadences at line-ends",
+      "audible swallow/breath catches between phrases"
+    ]
+  },
+  {
+    "base_dsl": {
+      "arousal": 0.25,
+      "control": 0.8,
+      "effort": 0.35,
+      "pace": 0.4,
+      "pause_before_ms": 250,
+      "valence": 0.55
+    },
+    "casting_notes": "Cast a 55\u201370 year-old female voice with genuine wear in the cords \u2014 a soft rasp earned, not performed. We want the auditory equivalent of a coffee-stained apron: warm, unhurried, faintly amused at nothing in particular. She should read like she's poured a million cups and isn't going to be hurried by anybody's bad night, including a detective's. Avoid theatrical 'sweet old lady' performances and avoid any sharp regional caricature; a faint, unplaceable American mid-century diner cadence is ideal. The voice must sit comfortably under the scene's tension without competing with it \u2014 low arousal, high composure, a small gravitational pull of normalcy. 'Pie's fresh, hon' should land like a benediction she doesn't know she's giving.",
+    "character": "Rosie",
+    "recommended_voice_traits": [
+      "mid-to-low register with a soft, lived-in rasp",
+      "warm maternal timbre, slightly nasal on long vowels",
+      "unhurried cadence with a gentle drawl on terms of endearment ('hon')",
+      "smoker's edge or dry-throat texture without harshness",
+      "casual American diner-belt coloring, lightly regional but unplaceable",
+      "easy melodic lilt at line endings, like she's said it ten thousand times",
+      "minimal breath effort, conversational volume, no projection"
+    ]
+  }
+]

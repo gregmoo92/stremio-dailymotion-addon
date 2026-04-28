@@ -1,0 +1,172 @@
+[
+  {
+    "directions": [
+      {
+        "beat_id": "0-4",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.3,
+          "control": 0.8,
+          "effort": 0.35,
+          "pace": 0.35,
+          "pause_before_ms": 800,
+          "valence": -0.3
+        },
+        "intent": "Set the tone; test whether she'll bolt.",
+        "subtext": "I'm warning you, but part of me is glad you did.",
+        "text": "You shouldn't have come."
+      },
+      {
+        "beat_id": "0-6",
+        "character": "MAYA",
+        "dsl": {
+          "arousal": 0.4,
+          "control": 0.6,
+          "effort": 0.4,
+          "pace": 0.45,
+          "pause_before_ms": 500,
+          "valence": -0.2
+        },
+        "intent": "Hold him to his promise; demand he deliver.",
+        "subtext": "Don't play games with me \u2014 I came for a reason.",
+        "text": "You said you had answers."
+      },
+      {
+        "beat_id": "0-9",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.25,
+          "control": 0.85,
+          "effort": 0.25,
+          "pace": 0.3,
+          "pause_before_ms": 700,
+          "valence": -0.4
+        },
+        "intent": "Correct her gently and reset the power dynamic.",
+        "subtext": "You misheard what you wanted to hear. I'm here to dig.",
+        "text": "I said I had questions."
+      },
+      {
+        "beat_id": "0-12",
+        "character": "MAYA",
+        "dsl": {
+          "arousal": 0.45,
+          "control": 0.55,
+          "effort": 0.45,
+          "pace": 0.4,
+          "pause_before_ms": 1200,
+          "valence": -0.3
+        },
+        "intent": "Brace herself and surrender to the questioning.",
+        "subtext": "Fine. Get it over with before I lose my nerve.",
+        "text": "Then ask them."
+      },
+      {
+        "beat_id": "0-14",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.4,
+          "control": 0.9,
+          "effort": 0.4,
+          "pace": 0.32,
+          "pause_before_ms": 900,
+          "valence": -0.5
+        },
+        "intent": "Pin her down with the one question that matters.",
+        "subtext": "This is the question I've carried for six years.",
+        "text": "Where were you the night your sister disappeared?"
+      },
+      {
+        "beat_id": "0-17",
+        "character": "ROSIE",
+        "dsl": {
+          "arousal": 0.3,
+          "control": 0.8,
+          "effort": 0.4,
+          "pace": 0.45,
+          "pause_before_ms": 1500,
+          "valence": 0.5
+        },
+        "intent": "Offer warmth, oblivious to the storm at the table.",
+        "subtext": "Don't mind me, just doing my rounds.",
+        "text": "Pie's fresh, hon."
+      },
+      {
+        "beat_id": "0-20",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.25,
+          "control": 0.85,
+          "effort": 0.3,
+          "pace": 0.35,
+          "pause_before_ms": 600,
+          "valence": -0.1
+        },
+        "intent": "Dismiss the interruption without breaking eye on Maya.",
+        "subtext": "Move along \u2014 this isn't the night for kindness.",
+        "text": "Not tonight, Rosie."
+      },
+      {
+        "beat_id": "0-23",
+        "character": "MAYA",
+        "dsl": {
+          "arousal": 0.4,
+          "control": 0.4,
+          "effort": 0.3,
+          "pace": 0.3,
+          "pause_before_ms": 1800,
+          "valence": -0.6
+        },
+        "intent": "Confess the geography before she loses her courage.",
+        "subtext": "There. The thing I've never said out loud.",
+        "text": "I was at the lake."
+      },
+      {
+        "beat_id": "0-25",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.35,
+          "control": 0.9,
+          "effort": 0.3,
+          "pace": 0.3,
+          "pause_before_ms": 700,
+          "valence": -0.4
+        },
+        "intent": "Tighten the noose with a single syllable.",
+        "subtext": "One word. Don't lie.",
+        "text": "Alone?"
+      },
+      {
+        "beat_id": "0-28",
+        "character": "MAYA",
+        "dsl": {
+          "arousal": 0.35,
+          "control": 0.3,
+          "effort": 0.18,
+          "pace": 0.28,
+          "pause_before_ms": 1500,
+          "valence": -0.7
+        },
+        "intent": "Plead to be believed without raising her voice.",
+        "subtext": "I found nothing \u2014 and I've been carrying that ever since.",
+        "text": "She was already gone when I got there."
+      },
+      {
+        "beat_id": "0-31",
+        "character": "KOWALSKI",
+        "dsl": {
+          "arousal": 0.5,
+          "control": 0.85,
+          "effort": 0.45,
+          "pace": 0.35,
+          "pause_before_ms": 2200,
+          "valence": -0.6
+        },
+        "intent": "Drive the blade in \u2014 force the real answer.",
+        "subtext": "Whatever you say next decides everything.",
+        "text": "Then why'd you wait six years to say so?"
+      }
+    ],
+    "scene_idx": 0
+  }
+]
