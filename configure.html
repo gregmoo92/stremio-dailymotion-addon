@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Configure — Dailymotion Stremio Addon</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+           max-width: 640px; margin: 2rem auto; padding: 0 1rem;
+           background: #0f0f10; color: #eee; }
+    h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+    p.lead { color: #999; margin: 0 0 1.25rem; }
+    label { display: block; margin: .9rem 0 .25rem; font-size: .9rem; color: #ddd; }
+    select, input[type="text"], input[type="number"] {
+      width: 100%; padding: .55rem; background: #1a1a1c; color: #eee;
+      border: 1px solid #2a2a2e; border-radius: 6px; font-size: .95rem;
+    }
+    .row { display: flex; gap: .75rem; }
+    .row > div { flex: 1; }
+    .check { display: flex; align-items: center; gap: .5rem; margin: 1rem 0 .25rem; }
+    .check label { margin: 0; }
+    .out { margin-top: 1.5rem; padding: .75rem; background: #1a1a1c;
+           border: 1px solid #2a2a2e; border-radius: 6px; word-break: break-all;
+           font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem; color: #cfd; }
+    .actions { display: flex; gap: .5rem; margin-top: .75rem; flex-wrap: wrap; }
+    button, .btn {
+      padding: .6rem 1rem; background: #2563eb; color: white; border: 0;
+      border-radius: 6px; cursor: pointer; font-size: .9rem; text-decoration: none;
+      display: inline-block; font-weight: 500;
+    }
+    button.secondary { background: #2a2a2e; color: #eee; }
+    .footer { color: #666; font-size: .8rem; margin-top: 2rem; }
+    .footer a { color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Dailymotion · Stremio Addon</h1>
+  <p class="lead">Pick your defaults, then install in Stremio. Genre is selectable per-catalog inside Stremio.</p>
+
+  <label for="sort">Default sort (search results)</label>
+  <select id="sort">
+    <option value="relevance">Relevance</option>
+    <option value="recent">Most recent</option>
+    <option value="visited">Most viewed</option>
+    <option value="trending" selected>Trending (falls back to relevance for searches)</option>
+  </select>
+
+  <div class="row">
+    <div>
+      <label for="lang">Language</label>
+      <input type="text" id="lang" placeholder="e.g. en, fr, es" maxlength="2" autocomplete="off">
+    </div>
+    <div>
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="e.g. US, FR, GB" maxlength="2" autocomplete="off">
+    </div>
+  </div>
+
+  <label for="limit">Results per page</label>
+  <select id="limit">
+    <option>10</option>
+    <option selected>25</option>
+    <option>50</option>
+    <option>100</option>
+  </select>
+
+  <div class="check">
+    <input type="checkbox" id="safe" checked>
+    <label for="safe">Family-safe filter</label>
+  </div>
+
+  <label>Manifest URL</label>
+  <div class="out" id="installUrl">—</div>
+  <div class="actions">
+    <a id="installBtn" class="btn" href="#">Install in Stremio</a>
+    <button class="secondary" id="copyBtn" type="button">Copy URL</button>
+  </div>
+
+  <p class="footer">Unofficial. Uses the public Dailymotion API; embed playback only. Respect Dailymotion's Terms of Service.</p>
+
+<script>
+  const ids = ['sort', 'lang', 'country', 'limit', 'safe'];
+  const out = document.getElementById('installUrl');
+  const installBtn = document.getElementById('installBtn');
+  const copyBtn = document.getElementById('copyBtn');
+
+  function buildConfig() {
+    return {
+      sort: document.getElementById('sort').value,
+      lang: document.getElementById('lang').value.trim().toLowerCase(),
+      country: document.getElementById('country').value.trim().toUpperCase(),
+      limit: parseInt(document.getElementById('limit').value, 10) || 25,
+      safe: document.getElementById('safe').checked
+    };
+  }
+
+  function b64url(s) {
+    return btoa(unescape(encodeURIComponent(s)))
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+
+  function update() {
+    const cfg = buildConfig();
+    const enc = b64url(JSON.stringify(cfg));
+    const manifestUrl = `${location.origin}/${enc}/manifest.json`;
+    out.textContent = manifestUrl;
+    installBtn.href = 'stremio://' + manifestUrl.replace(/^https?:\/\//, '');
+  }
+
+  ids.forEach(id => document.getElementById(id).addEventListener('input', update));
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(out.textContent);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => { copyBtn.textContent = 'Copy URL'; }, 1500);
+    } catch {
+      copyBtn.textContent = 'Copy failed';
+    }
+  });
+  update();
+</script>
+</body>
+</html>
